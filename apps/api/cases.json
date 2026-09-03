@@ -1,0 +1,39 @@
+[
+  {
+    "id": "case-001",
+    "jd": "We are hiring a Backend Developer with experience in Node.js, Express, MongoDB, REST APIs, authentication, and Docker.",
+    "company_url": "https://example.com",
+    "days": 1
+  },
+  {
+    "id": "case-002",
+    "jd": "We are hiring a Full Stack Developer with React, Node.js, TypeScript, MongoDB, and REST API experience.",
+    "company_url": "https://example.com",
+    "days": 3
+  },
+  {
+    "id": "case-003",
+    "jd": "Senior Software Engineer responsible for designing scalable distributed systems, APIs, cloud infrastructure, and mentoring engineers.",
+    "company_url": "https://example.com",
+    "days": 7
+  },
+  {
+    "id": "case-004",
+    "jd": "",
+    "company_url": "https://example.com",
+    "days": 5
+  },
+  {
+    "id": "case-005",
+    "jd": "Frontend Engineer with JavaScript, React, accessibility, testing, and performance optimization experience.",
+    "company_url": "https://example.com",
+    "days": 60
+  },
+  {
+  "id": "case-006",
+  "jd": "We are hiring a Full Stack Developer with React, Node.js, TypeScript, MongoDB, and REST API experience.",
+  "company_url": "https://example.com",
+  "days": 3
+}
+]
+

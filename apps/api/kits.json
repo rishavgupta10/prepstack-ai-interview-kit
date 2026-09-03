@@ -1,0 +1,1726 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-03T15:16:39.670Z",
+  "kits": [
+    {
+      "id": "case-001",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company_name": "example.com",
+          "company_url": "https://example.com",
+          "role": "Backend Developer",
+          "location": "Not specified",
+          "jd_chars": 118,
+          "researched_at": "2026-09-03T15:13:40.375Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "No company research content was available.",
+          "what_they_do": "Company information was not available.",
+          "sources": []
+        },
+        "role": {
+          "title": "Backend Developer",
+          "seniority": "unknown",
+          "responsibilities": [],
+          "requirements": [
+            {
+              "text": "Experience with Node.js",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-001"
+            },
+            {
+              "text": "Experience with Express",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-002"
+            },
+            {
+              "text": "Experience with MongoDB",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-003"
+            },
+            {
+              "text": "Experience with REST APIs",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-004"
+            },
+            {
+              "text": "Experience with authentication mechanisms",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-005"
+            },
+            {
+              "text": "Experience with Docker",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-006"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-001",
+            "requirement_ids": [
+              "req-001"
+            ],
+            "category": "technical",
+            "prompt": "Explain how the Node.js event loop handles asynchronous I/O operations and how this model impacts the scalability of a backend service.",
+            "answer_outline": "Describe the single‑threaded event loop, phases (timers, I/O callbacks, poll, check, close), non‑blocking I/O, callbacks/promises/async‑await, and how this allows many concurrent connections without spawning threads, leading to high scalability.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-002",
+            "requirement_ids": [
+              "req-002"
+            ],
+            "category": "technical",
+            "prompt": "How would you implement request validation and error handling in an Express application?",
+            "answer_outline": "Explain use of middleware for parsing bodies, validation libraries (e.g., Joi, express‑validator), creating a validation middleware, propagating errors to an error‑handling middleware, setting proper HTTP status codes, and logging.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-003",
+            "requirement_ids": [
+              "req-003"
+            ],
+            "category": "technical",
+            "prompt": "When designing a MongoDB schema for a blogging platform, what factors would influence your choice between embedding documents and referencing them?",
+            "answer_outline": "Discuss data access patterns, document size limits, read‑heavy vs write‑heavy workloads, need for atomic updates, query performance, and how embedding reduces joins while referencing maintains normalization.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-004",
+            "requirement_ids": [
+              "req-004"
+            ],
+            "category": "technical",
+            "prompt": "What are the key principles of RESTful API design, and how would you apply them when creating endpoints for a user resource?",
+            "answer_outline": "Cover resource‑based URLs, use of HTTP methods (GET, POST, PUT/PATCH, DELETE), statelessness, proper status codes, HATEOAS basics, versioning, pagination, and handling of nested resources.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-005",
+            "requirement_ids": [
+              "req-005",
+              "req-002"
+            ],
+            "category": "technical",
+            "prompt": "Describe how you would secure an Express API using JSON Web Tokens (JWT) for authentication and role‑based authorization.",
+            "answer_outline": "Explain token issuance on login, signing with secret/private key, middleware to verify token, attaching user info to request, checking roles/permissions, token expiration, refresh strategy, and handling revoked tokens.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-006",
+            "requirement_ids": [
+              "req-006",
+              "req-001",
+              "req-002"
+            ],
+            "category": "technical",
+            "prompt": "Walk through the steps to containerize a Node.js/Express application with Docker, including development and production considerations.",
+            "answer_outline": "Write a Dockerfile (base image, copy source, install deps, expose port, CMD), .dockerignore, multi‑stage builds, environment variables, binding to host ports, using Docker Compose for dev (e.g., linking to MongoDB), optimizing image size, and handling logs.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-007",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005",
+              "req-006"
+            ],
+            "category": "system design",
+            "prompt": "Design a scalable microservice for an e‑commerce product catalog using Node.js, Express, MongoDB, REST APIs, authentication, and Docker. Highlight how you would handle data modeling, API versioning, security, scaling, and deployment.",
+            "answer_outline": "Outline service boundaries, data model in MongoDB (catalog collections, indexing), Express routes following REST conventions, JWT authentication middleware, Dockerizing the service, using Docker Compose/Kubernetes for scaling, load balancing, read replicas, CI/CD pipeline, monitoring, and handling backward‑compatible API versioning.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-008",
+            "requirement_ids": [
+              "req-006"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time you diagnosed and resolved a production issue caused by a Docker container failure. What steps did you take?",
+            "answer_outline": "Describe incident detection (logs/monitoring), reproducing the issue, checking container logs, inspecting Docker healthchecks, resource limits, image mismatches, fixing root cause (e.g., missing env var, faulty Dockerfile), verifying resolution, and post‑mortem actions.",
+            "difficulty": 1
+          },
+          {
+            "id": "q-009",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005",
+              "req-006"
+            ],
+            "category": "company fit",
+            "prompt": "Why are you interested in joining a company that builds its backend with Node.js, Express, MongoDB, REST APIs, authentication mechanisms, and Docker?",
+            "answer_outline": "Express enthusiasm for JavaScript end‑to‑end development, mention strengths in building fast, scalable services, appreciation for the flexibility of MongoDB, importance of secure APIs, experience with containerization for reliable deployments, and alignment with the company’s tech stack and engineering culture.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-001",
+            "front": "What are the main phases of the Node.js event loop?",
+            "back": "Timers, pending callbacks, poll, check, close callbacks – they orchestrate execution of timers, I/O, setImmediate, and process exit.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-002",
+            "front": "How does non‑blocking I/O enable high scalability in Node.js?",
+            "back": "I/O operations are delegated to the OS; the event loop continues handling other requests, allowing thousands of concurrent connections with a single thread.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-003",
+            "front": "Which Express pattern is used for centralized error handling?",
+            "back": "Define an error‑handling middleware with signature (err, req, res, next) and call next(err) from other middleware to funnel errors to it.",
+            "requirement_ids": [
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-004",
+            "front": "Name two popular libraries for request validation in Express.",
+            "back": "Joi (via celebrate) and express‑validator.",
+            "requirement_ids": [
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-005",
+            "front": "When would you embed documents vs. reference them in MongoDB?",
+            "back": "Embed for tightly coupled data accessed together, read‑heavy scenarios, and when document size stays <16 MB; reference for large, frequently changing, or many‑to‑many relationships.",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-006",
+            "front": "What MongoDB feature helps enforce relationships without joins?",
+            "back": "Schema design using DBRefs or manual reference fields combined with $lookup aggregation when needed.",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-007",
+            "front": "List three key principles of RESTful API design.",
+            "back": "Resource‑based URLs, use of proper HTTP methods, stateless communication (plus appropriate status codes and versioning).",
+            "requirement_ids": [
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-008",
+            "front": "How do you implement pagination for a large collection in a REST API?",
+            "back": "Use limit/skip parameters or cursor‑based pagination (e.g., _id > lastSeen) and return links or metadata for next/prev pages.",
+            "requirement_ids": [
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-009",
+            "front": "Outline the steps to protect an Express API with JWT and role‑based access.",
+            "back": "Issue signed token on login, store user role in payload, verify token in middleware, attach user info to req, check required role per route, handle expiration and revocation.",
+            "requirement_ids": [
+              "req-005",
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-010",
+            "front": "What should a production‑grade Dockerfile for a Node.js app include?",
+            "back": "Use a lightweight base (node:alpine), copy only needed files, run npm ci, set NODE_ENV, expose port, define non‑root user, use multi‑stage build to prune dev deps.",
+            "requirement_ids": [
+              "req-006",
+              "req-001",
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-011",
+            "front": "How can you debug a failing Docker container in production?",
+            "back": "Check container logs (docker logs), inspect healthchecks, view exec into container (docker exec), verify env vars and resource limits, review image tags and Dockerfile changes.",
+            "requirement_ids": [
+              "req-006"
+            ]
+          },
+          {
+            "id": "fc-012",
+            "front": "What is a common strategy for scaling a Node.js microservice in Docker/Kubernetes?",
+            "back": "Stateless service → replicate pods, use a load balancer, horizontal pod autoscaler based on CPU/memory, external MongoDB replica set, and rolling updates via CI/CD.",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005",
+              "req-006"
+            ]
+          },
+          {
+            "id": "fc-013",
+            "front": "Why is Docker beneficial for deploying a Node.js/Express backend?",
+            "back": "Provides consistent environments, isolates dependencies, simplifies scaling, enables immutable images, and integrates with CI/CD pipelines.",
+            "requirement_ids": [
+              "req-006"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 1,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core requirements and fundamentals",
+              "question_ids": [
+                "q-005",
+                "q-006",
+                "q-007",
+                "q-001",
+                "q-002",
+                "q-003",
+                "q-004",
+                "q-008",
+                "q-009"
+              ],
+              "minutes": 83
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "case-002",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company_name": "example.com",
+          "company_url": "https://example.com",
+          "role": "Full Stack Developer",
+          "location": "Not specified",
+          "jd_chars": 103,
+          "researched_at": "2026-09-03T15:14:20.284Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "No company research content was available.",
+          "what_they_do": "Company information was not available.",
+          "sources": []
+        },
+        "role": {
+          "title": "Full Stack Developer",
+          "seniority": "unknown",
+          "responsibilities": [],
+          "requirements": [
+            {
+              "text": "React experience",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-001"
+            },
+            {
+              "text": "Node.js experience",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-002"
+            },
+            {
+              "text": "TypeScript experience",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-003"
+            },
+            {
+              "text": "MongoDB experience",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-004"
+            },
+            {
+              "text": "REST API experience",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-005"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-001",
+            "requirement_ids": [
+              "req-001"
+            ],
+            "category": "technical",
+            "prompt": "Explain how React hooks (useState, useEffect) replace class component lifecycle methods. Provide an example where useEffect with a cleanup function is necessary.",
+            "answer_outline": " • Mapping of componentDidMount, componentDidUpdate, componentWillUnmount to useEffect • Dependency array semantics • Example: subscription or timer cleanup inside useEffect returning a function",
+            "difficulty": 2
+          },
+          {
+            "id": "q-002",
+            "requirement_ids": [
+              "req-001"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a situation where you had to improve the performance of a large React application. What steps did you take and what metrics improved?",
+            "answer_outline": " • Identification of bottleneck (re‑renders, bundle size) • Use of memo, lazy loading, code‑splitting, profiling tools • Measurable improvements (FPS, load time, bundle reduction)",
+            "difficulty": 3
+          },
+          {
+            "id": "q-003",
+            "requirement_ids": [
+              "req-002"
+            ],
+            "category": "technical",
+            "prompt": "What is the event loop in Node.js and how does it handle I/O operations? Contrast callbacks, promises, and async/await in this context.",
+            "answer_outline": " • Single‑threaded loop, phases (timers, I/O callbacks, check, close) • Non‑blocking I/O delegated to libuv thread pool • Callbacks → pyramid, Promises → then chaining, async/await → syntactic sugar, error handling",
+            "difficulty": 2
+          },
+          {
+            "id": "q-004",
+            "requirement_ids": [
+              "req-002"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time you debugged a production Node.js service that was experiencing high latency. What tools and steps did you use?",
+            "answer_outline": " • Collected logs, used APM/profiling (e.g., Clinic, New Relic) • Identified hot path (CPU, DB, event loop blockage) • Optimized code or resources, verified improvement",
+            "difficulty": 3
+          },
+          {
+            "id": "q-005",
+            "requirement_ids": [
+              "req-003"
+            ],
+            "category": "technical",
+            "prompt": "How do generics in TypeScript improve type safety for reusable functions? Write a generic function that takes an array of items and returns a typed map keyed by a provided property.",
+            "answer_outline": " • Explanation of compile‑time enforcement, flexibility • Code example with <T, K extends keyof T>(items: T[], key: K) => Record<string, T> • Demonstration of type inference and safety",
+            "difficulty": 3
+          },
+          {
+            "id": "q-006",
+            "requirement_ids": [
+              "req-003"
+            ],
+            "category": "behavioural",
+            "prompt": "Share an experience where introducing TypeScript to an existing JavaScript codebase reduced bugs. How did you handle the migration and team adoption?",
+            "answer_outline": " • Assessment of pain points, gradual migration with allowJs/ts‑check, strict mode, automated refactoring • Training, code reviews, measurable bug count reduction",
+            "difficulty": 2
+          },
+          {
+            "id": "q-007",
+            "requirement_ids": [
+              "req-004"
+            ],
+            "category": "technical",
+            "prompt": "What are the trade‑offs between using a schema‑less design versus a defined schema (e.g., with Mongoose) in MongoDB for a rapidly evolving product?",
+            "answer_outline": " • Flexibility vs. validation, consistency, tooling, migration complexity • Impact on performance, queryability, developer experience, future schema changes",
+            "difficulty": 2
+          },
+          {
+            "id": "q-008",
+            "requirement_ids": [
+              "req-004"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a time you had to optimize a MongoDB query that was causing latency. What steps did you take and what was the outcome?",
+            "answer_outline": " • Analyzed explain plan, identified missing indexes, projection, query pattern changes • Created appropriate index, possibly refactored schema • Measured latency reduction",
+            "difficulty": 3
+          },
+          {
+            "id": "q-009",
+            "requirement_ids": [
+              "req-005"
+            ],
+            "category": "technical",
+            "prompt": "Design a RESTful endpoint for creating a new user resource. Include HTTP method, URL, expected request body, response codes, and how you would handle validation errors.",
+            "answer_outline": " • POST /api/users • JSON body with required fields • 201 Created on success, 400 Bad Request for validation, 409 Conflict for duplicate, location header • Server‑side validation, error format",
+            "difficulty": 2
+          },
+          {
+            "id": "q-010",
+            "requirement_ids": [
+              "req-005"
+            ],
+            "category": "behavioural",
+            "prompt": "Give an example of a time you had to version a public API without breaking existing clients. What strategy did you use?",
+            "answer_outline": " • Semantic versioning, URL versioning (/v1/...), deprecation headers, backward‑compatible additions, communication plan, migration guide",
+            "difficulty": 3
+          },
+          {
+            "id": "q-011",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005"
+            ],
+            "category": "system design",
+            "prompt": "Design a simple task‑management web application using React, Node.js, TypeScript, MongoDB, and a REST API. Outline the high‑level architecture, data models, and how the front‑end communicates with the back‑end.",
+            "answer_outline": " • Front‑end: React with TS, component hierarchy, state management (hooks or context) • Back‑end: Node.js + Express written in TS, REST routes (CRUD) • MongoDB schema for users, projects, tasks, indexes • Auth (JWT) • Data flow: API calls via fetch/axios, error handling, pagination • Deployment considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q-012",
+            "requirement_ids": [
+              "req-001",
+              "req-003"
+            ],
+            "category": "company fit",
+            "prompt": "Why are you interested in a role that emphasizes React and TypeScript, and how does your experience align with delivering high‑quality front‑end code?",
+            "answer_outline": " • Personal motivation for modern UI stack, enjoyment of type safety, past projects with React+TS, focus on maintainability, user experience, and collaboration",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-001",
+            "front": "How do useState and useEffect replace class component lifecycle methods?",
+            "back": "useState provides state; useEffect replaces componentDidMount, componentDidUpdate, and componentWillUnmount. Dependency array controls when the effect runs; returning a function acts as cleanup.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-002",
+            "front": "When is a cleanup function required in useEffect?",
+            "back": "When the effect creates subscriptions, timers, or other external resources that must be disposed on unmount or before the effect re‑runs.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-003",
+            "front": "Key techniques to improve performance of a large React app?",
+            "back": "Identify re‑render hotspots, use React.memo/useCallback, lazy‑load components, code‑splitting, reduce bundle size, and profile with React DevTools.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-004",
+            "front": "What are the main phases of the Node.js event loop?",
+            "back": "Timers, pending callbacks, idle/prepare, poll (I/O), check (setImmediate), close callbacks. Non‑blocking I/O is off‑loaded to libuv’s thread pool.",
+            "requirement_ids": [
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-005",
+            "front": "How do callbacks, promises, and async/await differ in Node.js I/O handling?",
+            "back": "Callbacks execute directly and can nest; promises provide then/catch chaining and better error handling; async/await is syntactic sugar over promises, making asynchronous code look synchronous.",
+            "requirement_ids": [
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-006",
+            "front": "Steps to debug high‑latency in a production Node.js service?",
+            "back": "Collect logs, use APM/profilers (e.g., Clinic, New Relic), inspect event‑loop delay, identify hot paths (CPU, DB, I/O), add tracing, optimize code or resources, verify latency improvement.",
+            "requirement_ids": [
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-007",
+            "front": "How do TypeScript generics enhance type safety for reusable functions?",
+            "back": "Generics let functions operate on any type while preserving relationships between inputs and outputs, enabling compile‑time checks and avoiding unsafe casts.",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-008",
+            "front": "Write a generic function to map an array to a record keyed by a property.",
+            "back": "function mapBy<T, K extends keyof T>(items: T[], key: K): Record<string, T> { return items.reduce((acc, item) => { acc[String(item[key])] = item; return acc; }, {} as Record<string, T>); }",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-009",
+            "front": "Benefits observed after migrating a JS codebase to TypeScript?",
+            "back": "Early detection of type errors, richer IDE support, clearer contracts, reduced runtime bugs, smoother onboarding, and incremental migration via allowJs/strict mode.",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-010",
+            "front": "Trade‑offs of schema‑less vs Mongoose schema in MongoDB?",
+            "back": "Schema‑less offers flexibility and rapid iteration but lacks validation and tooling. Mongoose schema provides validation, consistency, better IDE support, at the cost of added overhead and migration effort.",
+            "requirement_ids": [
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-011",
+            "front": "How to optimize a slow MongoDB query?",
+            "back": "Run explain(), verify index usage, add or adjust indexes, project only needed fields, rewrite query to be covered by indexes, and consider schema redesign if needed.",
+            "requirement_ids": [
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-012",
+            "front": "Design a RESTful endpoint to create a new user.",
+            "back": "POST /api/users with JSON body of required fields. Return 201 Created with Location header on success, 400 Bad Request for validation errors, 409 Conflict for duplicates.",
+            "requirement_ids": [
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-013",
+            "front": "Strategies for versioning a public API without breaking clients?",
+            "back": "Semantic versioning, URL versioning (e.g., /v1/), keep backward‑compatible endpoints, add deprecation headers, provide migration guides, and support multiple versions temporarily.",
+            "requirement_ids": [
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-014",
+            "front": "High‑level architecture of a task‑management app using React, Node.js, TS, MongoDB, REST.",
+            "back": "Frontend: React + TypeScript, component hierarchy, state via hooks/context, API calls with fetch/axios. Backend: Express + TypeScript, REST CRUD routes, JWT auth, service layer. MongoDB: collections for users, projects, tasks with appropriate indexes. Deploy via containers, CI/CD pipeline.",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-015",
+            "front": "Why focus on React and TypeScript for front‑end quality?",
+            "back": "React offers a component model and rich ecosystem; TypeScript adds static typing, catches errors early, improves refactoring, documentation, and team collaboration.",
+            "requirement_ids": [
+              "req-001",
+              "req-003"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 3,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core requirements and fundamentals",
+              "question_ids": [
+                "q-002",
+                "q-004",
+                "q-005",
+                "q-008"
+              ],
+              "minutes": 44
+            },
+            {
+              "day": 2,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-010",
+                "q-011",
+                "q-001",
+                "q-003"
+              ],
+              "minutes": 40
+            },
+            {
+              "day": 3,
+              "focus": "Final review and interview practice",
+              "question_ids": [
+                "q-006",
+                "q-007",
+                "q-009",
+                "q-012"
+              ],
+              "minutes": 34
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "case-003",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company_name": "example.com",
+          "company_url": "https://example.com",
+          "role": "Senior Software Engineer",
+          "location": "Not specified",
+          "jd_chars": 133,
+          "researched_at": "2026-09-03T15:14:52.037Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "No company research content was available.",
+          "what_they_do": "Company information was not available.",
+          "sources": []
+        },
+        "role": {
+          "title": "Senior Software Engineer",
+          "seniority": "senior",
+          "responsibilities": [
+            "Design scalable distributed systems",
+            "Develop APIs",
+            "Build cloud infrastructure",
+            "Mentor engineers"
+          ],
+          "requirements": []
+        },
+        "questions": [],
+        "flashcards": [],
+        "schedule": {
+          "days_available": 7,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core requirements and fundamentals",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 2,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 3,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 4,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 5,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 6,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 7,
+              "focus": "Final review and interview practice",
+              "question_ids": [],
+              "minutes": 0
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "case-004",
+      "status": "failed",
+      "kit": null,
+      "error": {
+        "code": "GENERATION_FAILED",
+        "message": "JD extraction returned an invalid job title."
+      }
+    },
+    {
+      "id": "case-005",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company_name": "example.com",
+          "company_url": "https://example.com",
+          "role": "Frontend Engineer",
+          "location": "Not specified",
+          "jd_chars": 106,
+          "researched_at": "2026-09-03T15:15:45.810Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "No company research content was available.",
+          "what_they_do": "Company information was not available.",
+          "sources": []
+        },
+        "role": {
+          "title": "Frontend Engineer",
+          "seniority": "unknown",
+          "responsibilities": [],
+          "requirements": [
+            {
+              "text": "JavaScript",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-001"
+            },
+            {
+              "text": "React",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-002"
+            },
+            {
+              "text": "accessibility",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-003"
+            },
+            {
+              "text": "testing",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-004"
+            },
+            {
+              "text": "performance optimization",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-005"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-001",
+            "requirement_ids": [
+              "req-001"
+            ],
+            "category": "technical",
+            "prompt": "Implement a debounce utility function in vanilla JavaScript and explain how closures are used in its implementation.",
+            "answer_outline": "• Function returns a new function that captures timer variable via closure • Uses clearTimeout/setTimeout to delay execution • Handles context and arguments preservation • Explanation of closure scope and why it works for debounce",
+            "difficulty": 2
+          },
+          {
+            "id": "q-002",
+            "requirement_ids": [
+              "req-002"
+            ],
+            "category": "technical",
+            "prompt": "Describe how React's virtual DOM diffing algorithm works and why using a proper 'key' prop in lists is important.",
+            "answer_outline": "• Virtual DOM creates lightweight copy of UI • Diffing compares previous and next trees • Reconciliation uses keys to identify moved/added/removed items • Correct keys prevent unnecessary re-renders and preserve component state",
+            "difficulty": 2
+          },
+          {
+            "id": "q-003",
+            "requirement_ids": [
+              "req-003"
+            ],
+            "category": "technical",
+            "prompt": "What steps do you take to make a custom React component accessible for screen reader users?",
+            "answer_outline": "• Use semantic HTML elements where possible • Add ARIA attributes only when needed • Ensure focus management (tab order, focus trap) • Provide accessible labels (aria-label, aria-labelledby) • Test with screen readers and keyboard navigation",
+            "difficulty": 2
+          },
+          {
+            "id": "q-004",
+            "requirement_ids": [
+              "req-004"
+            ],
+            "category": "technical",
+            "prompt": "Outline a testing strategy for a React component that includes unit, integration, and end‑to‑end tests.",
+            "answer_outline": "• Unit: Jest + React Testing Library for isolated component logic • Integration: Test component interaction with child components and context • E2E: Cypress or Playwright to verify UI flows in a real browser • Mock external services, use snapshot sparingly, aim for high coverage of critical paths",
+            "difficulty": 2
+          },
+          {
+            "id": "q-005",
+            "requirement_ids": [
+              "req-005"
+            ],
+            "category": "technical",
+            "prompt": "How would you profile and improve the runtime performance of a large React application?",
+            "answer_outline": "• Use Chrome DevTools Performance tab and React Profiler • Identify expensive renders, long scripting tasks, and layout thrashing • Apply memoization (React.memo, useMemo, useCallback) • Split code with dynamic import & React.lazy • Optimize assets, lazy‑load images, and reduce bundle size",
+            "difficulty": 3
+          },
+          {
+            "id": "q-006",
+            "requirement_ids": [
+              "req-003",
+              "req-004"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time you discovered an accessibility issue during testing. How did you identify it and what steps did you take to fix it?",
+            "answer_outline": "• Situation: testing a form component • Method: automated axe test + manual keyboard check • Issue: missing ARIA label on error message • Fix: added aria-describedby, ensured focus moves to error, wrote regression test • Result: passed accessibility audit and improved user experience",
+            "difficulty": 2
+          },
+          {
+            "id": "q-007",
+            "requirement_ids": [
+              "req-001",
+              "req-005"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a performance bottleneck you encountered in JavaScript code and the process you followed to resolve it.",
+            "answer_outline": "• Bottleneck: expensive loop causing UI jank • Tooling: Chrome Performance profile, flame chart • Diagnosis: identified heavy function, frequent re‑calculations • Solution: refactored to use memoization, moved work to Web Worker, debounced input handling • Outcome: frame rate restored, load time reduced",
+            "difficulty": 3
+          },
+          {
+            "id": "q-008",
+            "requirement_ids": [
+              "req-001",
+              "req-002"
+            ],
+            "category": "technical",
+            "prompt": "Explain two patterns you use to manage complex state in a large React application using plain JavaScript.",
+            "answer_outline": "• Context API with useReducer for global state • Custom hooks that encapsulate state logic • Immutable updates, action types, and middleware‑like side‑effects • Optional: use of Redux‑style patterns without external library",
+            "difficulty": 2
+          },
+          {
+            "id": "q-009",
+            "requirement_ids": [
+              "req-004",
+              "req-005"
+            ],
+            "category": "technical",
+            "prompt": "How do you incorporate performance considerations into your front‑end testing suite?",
+            "answer_outline": "• Write benchmarks using performance.now or Lighthouse CI • Include regression tests for component render time (e.g., jest‑performance‑timer) • Combine with CI thresholds to fail builds on regressions • Use mocking to isolate performance‑critical code paths",
+            "difficulty": 3
+          },
+          {
+            "id": "q-010",
+            "requirement_ids": [
+              "req-002",
+              "req-003"
+            ],
+            "category": "behavioural",
+            "prompt": "Give an example of how you advocated for accessibility improvements in a React project and influenced the team’s development practices.",
+            "answer_outline": "• Identified recurring accessibility gaps in PR reviews • Presented data from automated axe scans and user testing • Proposed linting rules (eslint-plugin-jsx-a11y) and component library updates • Conducted a short workshop, resulting in a documented accessibility checklist adopted by the team",
+            "difficulty": 2
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-001",
+            "front": "How does a debounce function work and why does it rely on closures?",
+            "back": "It returns a wrapper that stores a timer variable in its closure; each call clears the previous timer and sets a new setTimeout, delaying execution until the wait period passes. The closure retains the timer across calls.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-002",
+            "front": "What is the purpose of the 'key' prop in React list rendering?",
+            "back": "Keys give React a stable identity for each element, allowing the diff algorithm to match old and new items, detect moves, insertions, deletions, and avoid re‑creating components, preserving state and reducing re‑renders.",
+            "requirement_ids": [
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-003",
+            "front": "What are key steps to make a custom React component screen‑reader accessible?",
+            "back": "Use semantic HTML, add ARIA only when needed, provide accessible labels (aria-label/aria-labelledby), manage focus (tab order, focus trap), ensure role and state are announced, and test with screen readers and keyboard.",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-004",
+            "front": "What does a comprehensive testing pyramid look like for a React component?",
+            "back": "Unit tests with Jest/RTL for isolated logic, integration tests for component interaction and context, and end‑to‑end tests with Cypress/Playwright to verify user flows; mock external services and keep snapshots minimal.",
+            "requirement_ids": [
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-005",
+            "front": "How do you profile and optimise performance in a large React app?",
+            "back": "Use Chrome DevTools and React Profiler to spot expensive renders, apply memoization (React.memo, useMemo, useCallback), split code with dynamic import and React.lazy, lazy‑load assets, and reduce bundle size.",
+            "requirement_ids": [
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-006",
+            "front": "How would you troubleshoot a JavaScript performance bottleneck?",
+            "back": "Record a performance profile, locate long-running functions, analyze call stacks, then optimise by memoizing results, moving heavy work to Web Workers, debouncing inputs, and reducing unnecessary calculations.",
+            "requirement_ids": [
+              "req-001",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-007",
+            "front": "Name two plain‑JavaScript patterns for managing complex state in React.",
+            "back": "Context API combined with useReducer for global state, and custom hooks that encapsulate state logic and actions, both using immutable updates.",
+            "requirement_ids": [
+              "req-001",
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-008",
+            "front": "How can performance be baked into a front‑end test suite?",
+            "back": "Add benchmarks with performance.now or Lighthouse CI, write render‑time assertions (e.g., jest‑performance‑timer), set CI thresholds to fail on regressions, and mock heavy dependencies to isolate performance‑critical paths.",
+            "requirement_ids": [
+              "req-004",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-009",
+            "front": "How can you champion accessibility improvements within a React team?",
+            "back": "Identify gaps via axe scans and PR reviews, introduce lint rules (eslint-plugin-jsx-a11y), create a component library with accessible defaults, run workshops, and document a checklist adopted by the team.",
+            "requirement_ids": [
+              "req-002",
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-010",
+            "front": "When should you use React.memo vs useMemo vs useCallback?",
+            "back": "React.memo wraps a component to skip re‑render when props are shallow‑equal; useMemo memoizes a computed value; useCallback memoizes a function reference. Use each to prevent unnecessary renders or prop changes.",
+            "requirement_ids": [
+              "req-005",
+              "req-002"
+            ]
+          },
+          {
+            "id": "fc-011",
+            "front": "What automated tools help catch accessibility issues during testing?",
+            "back": "axe-core integration in Jest, eslint-plugin-jsx-a11y for linting, and screen‑reader testing with tools like pa11y or Cypress axe plugin to flag missing ARIA, contrast, and focus problems.",
+            "requirement_ids": [
+              "req-003",
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-012",
+            "front": "What is code‑splitting with dynamic import and React.lazy and why does it improve performance?",
+            "back": "Dynamic import loads modules on demand; React.lazy lets you render a component that loads its bundle only when needed, reducing initial load size and improving time‑to‑interactive.",
+            "requirement_ids": [
+              "req-005"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 60,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core requirements and fundamentals",
+              "question_ids": [
+                "q-005"
+              ],
+              "minutes": 11
+            },
+            {
+              "day": 2,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 3,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 4,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 5,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 6,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 7,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-007"
+              ],
+              "minutes": 11
+            },
+            {
+              "day": 8,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 9,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 10,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 11,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 12,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 13,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-009"
+              ],
+              "minutes": 11
+            },
+            {
+              "day": 14,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 15,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 16,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 17,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 18,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 19,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-001"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 20,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 21,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 22,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 23,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 24,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 25,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-002"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 26,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 27,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 28,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 29,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 30,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 31,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-003"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 32,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 33,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 34,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 35,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 36,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 37,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-004"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 38,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 39,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 40,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 41,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 42,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 43,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-006"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 44,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 45,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 46,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 47,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 48,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 49,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-008"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 50,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 51,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 52,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 53,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 54,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 55,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-010"
+              ],
+              "minutes": 9
+            },
+            {
+              "day": 56,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 57,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 58,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 59,
+              "focus": "Targeted interview practice",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 60,
+              "focus": "Final review and interview practice",
+              "question_ids": [],
+              "minutes": 0
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "case-006",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company_name": "example.com",
+          "company_url": "https://example.com",
+          "role": "Full Stack Developer",
+          "location": "Not specified",
+          "jd_chars": 103,
+          "researched_at": "2026-09-03T15:16:39.670Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "No company research content was available.",
+          "what_they_do": "Company information was not available.",
+          "sources": []
+        },
+        "role": {
+          "title": "Full Stack Developer",
+          "seniority": "unknown",
+          "responsibilities": [],
+          "requirements": [
+            {
+              "text": "React",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-001"
+            },
+            {
+              "text": "Node.js",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-002"
+            },
+            {
+              "text": "TypeScript",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-003"
+            },
+            {
+              "text": "MongoDB",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-004"
+            },
+            {
+              "text": "REST API experience",
+              "kind": "technical",
+              "priority": "must",
+              "id": "req-005"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-001",
+            "requirement_ids": [
+              "req-001"
+            ],
+            "category": "technical",
+            "prompt": "Explain the differences between class components and functional components in React, and when you would choose one over the other.",
+            "answer_outline": "Discuss lifecycle methods vs. hooks, readability, state management, performance considerations, and modern best‑practice favoring functional components with hooks.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-002",
+            "requirement_ids": [
+              "req-001",
+              "req-003"
+            ],
+            "category": "technical",
+            "prompt": "How do you type React component props and state using TypeScript? Provide an example of a typed functional component.",
+            "answer_outline": "Show interface/type definitions for props, use of React.FC or generic props, typing state with useState, handling optional/default props, and compile‑time safety benefits.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-003",
+            "requirement_ids": [
+              "req-002",
+              "req-003",
+              "req-005"
+            ],
+            "category": "technical",
+            "prompt": "Describe how you would design and implement a RESTful endpoint in Node.js using TypeScript that creates a new resource and returns the created object with proper HTTP status codes.",
+            "answer_outline": "Outline Express route handler, request validation (e.g., Joi or Zod), TypeScript interfaces for request/response, async/await with error handling, status 201, location header, and separation of concerns (controller/service).",
+            "difficulty": 3
+          },
+          {
+            "id": "q-004",
+            "requirement_ids": [
+              "req-004",
+              "req-003"
+            ],
+            "category": "technical",
+            "prompt": "When modeling data in MongoDB with Mongoose and TypeScript, how do you define schemas and ensure type safety throughout the application?",
+            "answer_outline": "Define Mongoose schema, create TypeScript interfaces/types for documents, use Schema<T> generic, enable strict typing in models, discuss schema validation, timestamps, and handling of ObjectId types.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-005",
+            "requirement_ids": [
+              "req-002",
+              "req-005"
+            ],
+            "category": "technical",
+            "prompt": "What strategies do you use to optimise the performance of a Node.js REST API under high load?",
+            "answer_outline": "Explain use of clustering or worker threads, connection pooling, efficient query patterns, caching (e.g., Redis), pagination, rate limiting, async I/O, monitoring, and profiling tools.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-006",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005"
+            ],
+            "category": "system design",
+            "prompt": "Design a full‑stack web application for a task‑management tool using React, Node.js, TypeScript, MongoDB, and REST APIs. Outline the major components, data flow, and how you would handle authentication, authorization, and real‑time updates.",
+            "answer_outline": "Front‑end: React with functional components, TypeScript, state management (Context/Redux), API service layer. Back‑end: Node.js/Express with TypeScript, REST routes, JWT authentication, role‑based middleware, Mongoose models. Database: MongoDB schema for users, tasks, relationships. Real‑time: WebSocket or Server‑Sent Events for updates. Deployment considerations, CI/CD, testing strategy.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-007",
+            "requirement_ids": [
+              "req-003"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a project where you migrated an existing JavaScript codebase to TypeScript. What challenges did you face and how did you overcome them?",
+            "answer_outline": "Describe initial assessment, incremental migration (allowJs, ts‑check), defining typings, dealing with third‑party libraries, refactoring, tooling (tsc, ESLint), testing to ensure no regressions, and benefits realized.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-008",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-005"
+            ],
+            "category": "behavioural",
+            "prompt": "How do you ensure that the contract between your React front‑end and Node.js REST API remains consistent as both evolve?",
+            "answer_outline": "Discuss API documentation (OpenAPI/Swagger), shared TypeScript types or code generation, contract testing (Pact), integration tests, versioning strategy, and communication practices within the team.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-009",
+            "requirement_ids": [
+              "req-004"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a situation where you had to debug a complex query performance issue in MongoDB. What steps did you take?",
+            "answer_outline": "Explain use of explain(), indexing strategy, schema redesign, aggregation pipeline optimization, monitoring tools, and how the fix improved latency.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-010",
+            "requirement_ids": [
+              "req-001",
+              "req-004"
+            ],
+            "category": "company fit",
+            "prompt": "Given our focus on building data‑intensive web applications, how would you leverage React and MongoDB together to provide a responsive user experience?",
+            "answer_outline": "Talk about client‑side pagination/infinite scroll, optimistic UI updates, using aggregation pipelines to shape data, caching strategies, and minimizing payload size.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-001",
+            "front": "When should you use a class component instead of a functional component in React?",
+            "back": "Rarely—class components are needed only when you must use legacy lifecycle methods not covered by hooks or when working with codebases that haven’t migrated to hooks. Functional components with hooks are preferred for readability and reuse.",
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "fc-002",
+            "front": "How do you type props for a functional React component in TypeScript?",
+            "back": "Define an interface/type for the props, then declare the component as `const MyComp: React.FC<Props> = (props) => { … }` or use a generic: `function MyComp(props: Props) { … }`.",
+            "requirement_ids": [
+              "req-001",
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-003",
+            "front": "What is the typical TypeScript signature for an Express route that creates a resource?",
+            "back": "`async (req: Request<Params, ResBody, ReqBody>, res: Response<ResBody>) => { … }` – use interfaces for `ReqBody` and `ResBody`, validate input, call service, return `res.status(201).json(createdObj);`.",
+            "requirement_ids": [
+              "req-002",
+              "req-003",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-004",
+            "front": "How can you ensure type safety when defining a Mongoose model with TypeScript?",
+            "back": "Create a TypeScript interface for the document, then declare `const schema = new Schema<Interface>({ … })` and `export const Model = model<Interface>('Name', schema);` – the generic ties the schema to the TS type.",
+            "requirement_ids": [
+              "req-004",
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-005",
+            "front": "Name three techniques to improve Node.js API performance under high load.",
+            "back": "1) Use clustering or worker threads to utilize multiple CPU cores. 2) Implement caching (e.g., Redis) for frequent reads. 3) Apply connection pooling and efficient query patterns; add pagination and rate limiting.",
+            "requirement_ids": [
+              "req-002",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-006",
+            "front": "What architectural layers would you separate in a full‑stack task‑management app using the given tech stack?",
+            "back": "Front‑end: React UI + TS services. API layer: Express routes (TS) handling validation, auth, and delegating to services. Service layer: business logic. Data layer: Mongoose models (MongoDB). Cross‑cutting: JWT auth, logging, testing, CI/CD.",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-003",
+              "req-004",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-007",
+            "front": "What are the main steps to migrate a JavaScript codebase to TypeScript?",
+            "back": "1) Enable `allowJs` and `checkJs` for gradual typing. 2) Add `tsconfig.json` with strict options. 3) Incrementally add type declarations (JSDoc or .d.ts). 4) Replace .js files with .ts/.tsx, fixing type errors. 5) Update third‑party typings via `@types`.",
+            "requirement_ids": [
+              "req-003"
+            ]
+          },
+          {
+            "id": "fc-008",
+            "front": "How do you keep the contract between a React front‑end and a Node REST API consistent?",
+            "back": "Use shared TypeScript types or code generation from an OpenAPI spec, maintain Swagger docs, add contract tests (Pact), version the API, and run integration tests in CI.",
+            "requirement_ids": [
+              "req-001",
+              "req-002",
+              "req-005"
+            ]
+          },
+          {
+            "id": "fc-009",
+            "front": "What steps would you take to troubleshoot a slow MongoDB aggregation pipeline?",
+            "back": "Run `explain('executionStats')` to view stages, add appropriate indexes, simplify pipeline (project early, limit fields), rewrite with `$lookup` alternatives, and consider schema redesign if needed.",
+            "requirement_ids": [
+              "req-004"
+            ]
+          },
+          {
+            "id": "fc-010",
+            "front": "How can React and MongoDB be combined to deliver a responsive UI for large data sets?",
+            "back": "Implement client‑side pagination or infinite scroll, use optimistic UI updates, request only needed fields via aggregation pipelines, cache results locally (React Query), and minimize payload size.",
+            "requirement_ids": [
+              "req-001",
+              "req-004"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 3,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core requirements and fundamentals",
+              "question_ids": [
+                "q-003",
+                "q-005",
+                "q-006",
+                "q-001"
+              ],
+              "minutes": 42
+            },
+            {
+              "day": 2,
+              "focus": "Targeted interview practice",
+              "question_ids": [
+                "q-002",
+                "q-004",
+                "q-007"
+              ],
+              "minutes": 27
+            },
+            {
+              "day": 3,
+              "focus": "Final review and interview practice",
+              "question_ids": [
+                "q-008",
+                "q-009",
+                "q-010"
+              ],
+              "minutes": 25
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    }
+  ]
+}

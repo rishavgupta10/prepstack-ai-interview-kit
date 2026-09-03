@@ -161,10 +161,10 @@ cd prepstack-ai-interview-kit
 If the repository contains separate frontend and backend applications:
 
 ```bash
-cd backend
+cd /apps/api
 npm install
 
-cd ../frontend
+cd /apps/web
 npm install
 ```
 
@@ -208,7 +208,7 @@ Make sure your MongoDB instance is running and that the configured `MONGODB_URI`
 ### 5. Start the backend
 
 ```bash
-cd backend
+cd /apps/api
 npm run dev
 ```
 
@@ -219,7 +219,7 @@ The backend API will start on the configured port.
 In another terminal:
 
 ```bash
-cd frontend
+cd /apps/web
 npm run dev
 ```
 
@@ -564,6 +564,3 @@ When contributing or extending the application:
 7. Avoid storing secrets in source control.
 8. Use meaningful commit messages.
 
-## 📄 License
-
-Add the project's chosen license here before publishing the repository.

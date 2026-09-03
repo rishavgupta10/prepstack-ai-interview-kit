@@ -1,24 +1,3 @@
-/**
- * Fonts: this page pairs a `font-display` utility (Fraunces, a serif with
- * some editorial weight — it carries the "case file" feel) with the default
- * `font-sans` (Inter) for body copy and `font-mono` (JetBrains Mono) for
- * requirement ids, tags, and log-style notes.
- *
- * In your root layout:
- *
- *   import { Fraunces } from "next/font/google";
- *   const fraunces = Fraunces({
- *     subsets: ["latin"],
- *     axes: ["opsz"],
- *     variable: "--font-display",
- *   });
- *   // add fraunces.variable to <html className={...}>
- *
- * In tailwind.config:
- *
- *   theme: { extend: { fontFamily: { display: ["var(--font-display)"] } } }
- */
-
 import {
   Globe,
   FileText,
@@ -39,6 +18,13 @@ import {
   Link2,
 } from "lucide-react";
 import { Navbar } from "./NavBar";
+
+import type { ReactNode } from "react";
+
+type TabProps = {
+  color?: "indigo" | "moss";
+  children: ReactNode;
+};
 
 /* ── Data ── */
 
@@ -134,7 +120,7 @@ const KIT_SECTIONS = [
 /* Small folder-tab label — the recurring structural device that stands in
    for the generic all-caps eyebrow. Color ties each section to where it
    sits in the pipeline (indigo = building, moss = verifying). */
-function Tab({ color = "indigo", children }) {
+function Tab({ color = "indigo", children }: TabProps) {
   const tones = {
     indigo: "bg-[#EEF1F8] text-[#30467B] border-[#C9D3E8]",
     moss: "bg-[#EDF3EC] text-[#3F6B4E] border-[#CBDDC9]",
@@ -188,9 +174,9 @@ export default function LandingPage() {
             </h1>
 
             <p className="mt-5 text-base text-[#565A4F] leading-relaxed max-w-md">
-              We pull the requirements from the description, crawl the
-              company site for how they hire, and build a prep kit you can
-              edit, practice, and work through on a schedule you set.
+              We pull the requirements from the description, crawl the company
+              site for how they hire, and build a prep kit you can edit,
+              practice, and work through on a schedule you set.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -313,10 +299,10 @@ export default function LandingPage() {
               A kit isn&apos;t one prompt away.
             </h2>
             <p className="mt-3 text-[#565A4F]">
-              A company that publishes a take-home followed by a system
-              design round needs a different kit from one that says nothing
-              about how it hires. That only shows up if the research happens
-              before the questions do.
+              A company that publishes a take-home followed by a system design
+              round needs a different kit from one that says nothing about how
+              it hires. That only shows up if the research happens before the
+              questions do.
             </p>
           </div>
 
@@ -332,8 +318,8 @@ export default function LandingPage() {
                   interview kit&quot;
                 </p>
                 <p className="text-[#9A9D8F]">
-                  → guesses at requirements, invents an interview process,
-                  no way to check anything got missed
+                  → guesses at requirements, invents an interview process, no
+                  way to check anything got missed
                 </p>
               </div>
               <p className="mt-4 text-xs text-[#8A8E7E]">
@@ -348,16 +334,16 @@ export default function LandingPage() {
               </p>
               <div className="space-y-3 font-mono text-xs leading-relaxed">
                 <p className="text-[#565A4F]">
-                  <span className="text-[#30467B]">01</span> extract → tag
-                  each requirement must or nice
+                  <span className="text-[#30467B]">01</span> extract → tag each
+                  requirement must or nice
                 </p>
                 <p className="text-[#565A4F]">
                   <span className="text-[#30467B]">02</span> research → crawl
                   site, find the hiring page
                 </p>
                 <p className="text-[#565A4F]">
-                  <span className="text-[#30467B]">03</span> generate →
-                  one focused call per requirement
+                  <span className="text-[#30467B]">03</span> generate → one
+                  focused call per requirement
                 </p>
                 <p className="text-[#565A4F]">
                   <span className="text-[#30467B]">04</span> check → diff
@@ -410,8 +396,8 @@ export default function LandingPage() {
               Six steps, run in order.
             </h2>
             <p className="mt-3 text-[#565A4F]">
-              Requirement extraction and coverage checking are arithmetic —
-              your code decides them, not the model.
+              Requirement extraction and coverage checking are arithmetic — your
+              code decides them, not the model.
             </p>
           </div>
 
@@ -443,9 +429,9 @@ export default function LandingPage() {
               A kit you can reshape, not just read.
             </h2>
             <p className="mt-3 text-[#565A4F]">
-              Every section can be edited by hand or regenerated on its own —
-              a question you rewrote stays put even if you regenerate the
-              rest of its category.
+              Every section can be edited by hand or regenerated on its own — a
+              question you rewrote stays put even if you regenerate the rest of
+              its category.
             </p>
           </div>
 
@@ -500,8 +486,8 @@ export default function LandingPage() {
             Turn a job post into a study plan.
           </h2>
           <p className="mt-3 text-[#565A4F] max-w-md mx-auto">
-            Paste the description, point at the company, say how many days
-            you have — the kit adapts to what it actually finds.
+            Paste the description, point at the company, say how many days you
+            have — the kit adapts to what it actually finds.
           </p>
           <a
             href="/register"

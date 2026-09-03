@@ -64,7 +64,7 @@ export function LoginForm() {
 
                     {/* Tagline */}
                     <p className="text-xs text-slate-500 text-center tracking-wide uppercase">
-                        AI Career · Client Communication Coach
+                        AI Interview kit generator and prepration platform
                     </p>
                 </div>
 

@@ -56,7 +56,7 @@ export function RegisterForm() {
                         prepStack<span className="text-blue-400"> AI</span>
                     </h1>
                     <p className="text-xs text-slate-500 text-center tracking-wide uppercase">
-                        AI Career · Client Communication Coach
+                        AI Interview kit generator and prepration platform
                     </p>
                 </div>
 

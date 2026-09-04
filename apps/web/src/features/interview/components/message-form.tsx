@@ -64,7 +64,7 @@ export function MessageForm({
     };
 
     const handleReportGeneration = async () => {
-        if (messagesLength < 20) {
+        if (messagesLength < 5) {
             Notiflix.Notify.info("not enough question answered to generate report")
             return
         }

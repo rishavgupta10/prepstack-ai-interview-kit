@@ -11,24 +11,30 @@ import { EyeOff, ScanSearchIcon, UploadIcon } from "lucide-react";
 import { useState } from "react";
 import { AxiosError } from "axios";
 import { useAnalyseResume } from "../hooks/use-analyse-resume";
+import Notiflix from "notiflix";
 
 export function ResumeOverview() {
   const [openForm, setOpenForm] = useState<boolean>(false);
-  const { mutate, isPending, isSuccess } = useAnalyseResume();
-
-  function handleAnalyseResume() {
-    mutate();
-    if (isSuccess) {
-      window.location.reload();
-    }
-  }
-
   const {
     data,
     isLoading,
     isError,
     error,
+    refetch: refetchResume,
   } = useResume();
+
+  const { mutate, isPending } = useAnalyseResume();
+
+  function handleAnalyseResume() {
+    mutate(undefined, {
+      onSuccess: async () => {
+        await refetchResume();
+      },
+      onError: (error) => {
+        Notiflix.Notify.failure(error.message || "An error occurred while analyzing the resume.");
+      }
+    });
+  }
 
   const ErrorResponse = (error as AxiosError<{ message?: string }>)?.response;
 
@@ -105,7 +111,7 @@ export function ResumeOverview() {
           </div>
         ) : (
           <div className="flex items-center gap-2 justify-center">
-            <ScanSearchIcon size={18} /> Re-analyze Resume Profile
+            <ScanSearchIcon size={18} /> <span>Click to {resume.skills.length ? "Re-analyze" : "Analyze"} Resume Profile</span>
           </div>
         )}
       </button>

@@ -83,7 +83,7 @@ export function MessageForm({
     return (
 
         <>
-            <div onClick={handleReportGeneration} className="fixed text-xs top-4 rounded-full right-4 z-50  hover:bg-violet-500 hover:scale-95 active:scale-75 hover:shadow-violet-400 px-2 cursor-pointer duration-200 py-1 text-emerald-200 capitalize border border-emerald-200/60 shadow-2xl bg-emerald-400/5 shadow-emerald-500 md:hidden flex items-center gap-2">
+            <div onClick={handleReportGeneration} className="fixed bg-emerald-400 text-sm font-semibold top-4 rounded-full right-4 z-50  hover:bg-violet-500 hover:scale-95 active:scale-75 hover:shadow-violet-400 px-2 cursor-pointer duration-200 py-1 text-emerald-200 capitalize border border-emerald-200/60 shadow-2xl text-white shadow-emerald-500 md:hidden flex items-center gap-2">
                 {generateReportPending ? "submitting..." : "submit"}
                 {generateReportPending ? <Loader2 className="animate-spin" /> : <MemoryStick />}
             </div>
@@ -111,7 +111,7 @@ export function MessageForm({
                 rounded-2xl
                 border
                 border-zinc-800
-                bg-zinc-950
+                bg-zinc-50
                 p-2
                 mt-3
                 focus-within:border-violet-500
@@ -132,6 +132,7 @@ export function MessageForm({
                         className="
                     flex-1
                     bg-transparent
+                    text-zinc-950
                     px-3
                     py-2
                     text-sm
@@ -177,7 +178,7 @@ export function MessageForm({
                             />
                         )}
                     </button>
-                    <div onClick={handleReportGeneration} className="rounded-md  hover:bg-violet-500 hover:scale-95 active:scale-75 hover:shadow-violet-400 px-2 cursor-pointer duration-200 py-1 text-emerald-200 capitalize border border-emerald-200/60 shadow-2xl bg-emerald-400/5 shadow-emerald-500 hidden md:flex items-center gap-2">
+                    <div onClick={handleReportGeneration} className="rounded-md text-white  hover:bg-violet-500 hover:scale-95 active:scale-75 hover:shadow-violet-400 px-2 cursor-pointer duration-200 py-1 text-emerald-200 capitalize border border-emerald-200/60 shadow-2xl bg-emerald-400 shadow-emerald-500 hidden md:flex items-center gap-2">
                         {generateReportPending ? "generating..." : "generate report"}
                         {generateReportPending ? <Loader2 className="animate-spin" /> : <MemoryStick />}
                     </div>

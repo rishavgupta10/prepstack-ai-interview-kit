@@ -137,7 +137,7 @@ export function Navbar() {
               className="flex items-center gap-2 rounded-lg border bg-blue-950 border-cyan-900 hover:border-[#2A3D5C] px-4 py-1.5 transition-colors"
             >
               {isLoggedIn ? (
-                <div className="w-7 h-7 rounded-full  bg-blue-600/15 border border-white flex items-center justify-center text-xs font-semibold text-white">
+                <div className="w-7 h-7 rounded-full  bg-blue-400/80 border-3 border-white/60 flex items-center justify-center text-xs font-semibold text-white">
                   {user?.name?.charAt(0)}
                 </div>
               ) : (

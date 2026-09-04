@@ -162,7 +162,7 @@ const Icon = {
 
 // ─── Skill chip (profile view) ────────────────────────────────────────────────
 const SkillChip: React.FC<{ label: string }> = ({ label }) => (
-  <span className="inline-flex items-center px-3 py-1.5 text-xs font-medium tracking-wide border border-white/12 rounded-md bg-white text-white/70 hover:bg-white hover:text-white hover:border-white transition-all duration-200 cursor-default select-none">
+  <span className="inline-flex items-center px-3 py-1.5 text-xs font-medium tracking-wide border border-white/12 rounded-md bg-blue-400/90 text-white hover:bg-white hover:text-white hover:border-white transition-all duration-200 cursor-default select-none">
     {label}
   </span>
 );
@@ -625,7 +625,7 @@ const UserProfile: React.FC = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full bg-white flex items-center justify-center text-white text-2xl font-bold">
+                    <div className="w-full h-full bg-blue-400 flex items-center justify-center text-white text-2xl font-bold">
                       {initials}
                     </div>
                   )}
@@ -635,7 +635,7 @@ const UserProfile: React.FC = () => {
               </div>
 
               <div>
-                <h2 className="text-lg font-bold tracking-tight leading-tight">
+                <h2 className="text-lg text-blue-400 font-bold tracking-tight leading-tight">
                   {userProfile?.name}
                 </h2>
                 <p className="text-sm text-white mt-1 font-medium">

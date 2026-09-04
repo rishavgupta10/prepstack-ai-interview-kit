@@ -3,15 +3,18 @@ import { ResumeMetaDataRepository } from "../../resume/infrastructure/resumemeta
 import { AIService } from "../../../ai/core/ai.service";
 import { parseResumeToMetadata } from "../../../ai/parsers/resume-metadata.parser";
 import { initialPreparationPrompt, generateMoreQuestionsPrompt } from "../../../ai/prompts/preparation.prompt";
+import { ResumeService } from "../../resume/application/resume.service";
 
 const preparationRepository = new PreparationRepository();
 const resumeMetaDataRepository = new ResumeMetaDataRepository();
+const resumeService = new ResumeService();
 const aiService = new AIService();
 
 export class PreparationService {
   async createPreparation(userId: string, jobDescription: string) {
     // 1. Fetch user's ResumeMetaData
-    const resumeMetaData = await resumeMetaDataRepository.fetchResumeMetaData(userId);
+    // const resumeMetaData = await resumeMetaDataRepository.fetchResumeMetaData(userId);
+     const resumeMetaData = await resumeService.getMyResumeRawText(userId);
     if (!resumeMetaData) {
       throw new Error("No resume found. Please build or upload your resume in the Resume Builder first to tailor the preparation.");
     }

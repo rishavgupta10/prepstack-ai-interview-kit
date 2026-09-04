@@ -10,6 +10,14 @@ export class ResumeRepository {
       userId,
     }).select("-rawText");
   }
+
+
+   async findByUserResumeRawText(userId: string) {
+    return ResumeModel.findOne({
+      userId,
+    }).select("rawText");
+  }
+
   async findByUserIdwithRawText(userId: string) {
     return ResumeModel.findOne({
       userId,

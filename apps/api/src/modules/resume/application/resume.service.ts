@@ -32,4 +32,9 @@ export class ResumeService {
     const myresume = await resumeRepository.findByUserId(userId);
     return myresume;
   }
+
+  async getMyResumeRawText(userId: string) {
+    const myresume = await resumeRepository.findByUserResumeRawText(userId);
+    return myresume;
+  }
 }

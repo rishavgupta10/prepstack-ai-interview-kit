@@ -65,9 +65,9 @@ export default function ReportListPage() {
     const q = query.toLowerCase();
     const matchSearch =
       !q ||
-      r.role.toLowerCase().includes(q) ||
-      r.topic.toLowerCase().includes(q) ||
-      r.tags.some((t) => t.toLowerCase().includes(q));
+      r?.role?.toLowerCase().includes(q) ||
+      r?.topic?.toLowerCase().includes(q) ||
+      r?.tags?.some((t) => t?.toLowerCase().includes(q));
     return matchFilter && matchSearch;
   });
 
@@ -166,7 +166,7 @@ export default function ReportListPage() {
             placeholder="Search reports…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="bg-[#13161f] border border-[#1e2231] focus:border-violet-500/40 outline-none rounded-xl pl-8 pr-3 py-1.5 text-[12px] text-slate-300 placeholder:text-gray-300/70 w-44 sm:w-52 transition-colors"
+            className="bg-white focus:shadow-inner shadow-black/90 border border-zinc-400/40 focus:border-violet-500/40 outline-none rounded-xl pl-8 pr-3 py-1.5 text-[12px] text-slate-950 placeholder:text-gray-500/90 w-44 sm:w-52 transition-colors"
           />
         </div>
       </div>
@@ -174,8 +174,8 @@ export default function ReportListPage() {
       {/* Cards */}
       {filtered.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 text-center">
-          <div className="w-14 h-14 rounded-2xl bg-[#13161f] border border-[#1e2231] flex items-center justify-center mb-4">
-            <FileText size={22} className="text-[#334155]" />
+          <div className="w-14 h-14 rounded-2xl bg-white  shadow-inner shadow-black/80 flex items-center justify-center mb-4">
+            <FileText size={22} className="text-black" />
           </div>
           <p className="text-[15px] font-medium text-slate-400 mb-1">
             No reports found

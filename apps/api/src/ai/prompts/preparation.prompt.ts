@@ -5,7 +5,7 @@ Your task is to analyze the candidate's resume metadata and the target Job Descr
 2. A list of exactly 20 tailored interview questions and detailed answers that the candidate should prepare. These should cover technical skills, projects from the resume, behavioral scenarios, and key requirements of the JD.
 
 Candidate Resume Metadata:
-${JSON.stringify(resumeData, null, 2)}
+${resumeData}
 
 Target Job Description:
 ${jobDescription}

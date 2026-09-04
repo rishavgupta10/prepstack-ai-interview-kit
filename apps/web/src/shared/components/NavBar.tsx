@@ -134,10 +134,10 @@ export function Navbar() {
           <div className="relative" ref={menuRef}>
             <button
               onClick={() => setMenuOpen((v) => !v)}
-              className="flex items-center gap-2 rounded-lg border bg-emerald-500 border-[#1E2D45] hover:border-[#2A3D5C] px-4 py-1.5 transition-colors"
+              className="flex items-center gap-2 rounded-lg border bg-blue-950 border-cyan-900 hover:border-[#2A3D5C] px-4 py-1.5 transition-colors"
             >
               {isLoggedIn ? (
-                <div className="w-7 h-7 rounded-full  bg-blue-600/15 border border-blue-500/30 flex items-center justify-center text-xs font-semibold text-blue-400">
+                <div className="w-7 h-7 rounded-full  bg-blue-600/15 border border-white flex items-center justify-center text-xs font-semibold text-white">
                   {user?.name?.charAt(0)}
                 </div>
               ) : (

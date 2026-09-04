@@ -5,7 +5,7 @@ import { MessageForm } from "@/features/interview/components/message-form";
 import { useInterviewDetails } from "@/features/interview/hooks/use-interview-details";
 import { InterviewLoader } from "@/shared/components/interviewLoader";
 import { cn } from "@/shared/lib/cn";
-import { ArrowLeftCircle, BrainCircuit, Briefcase, CalendarDays, EyeIcon } from "lucide-react";
+import { ArrowLeftCircle, Briefcase, CalendarDays, EyeIcon } from "lucide-react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 

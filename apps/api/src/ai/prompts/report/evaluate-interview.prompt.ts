@@ -1,44 +1,58 @@
 export const evaluateInterviewPrompt = (
   resume: string,
   conversation: string,
-) => `
-You are a senior engineering interviewer.
+) => {
+  return `
+You are a senior engineering interviewer evaluating a technical interview.
 
-Analyze the interview.
+Analyze ONLY the provided resume and interview conversation.
 
-Resume:
-
+RESUME:
 ${resume}
 
-Interview:
-
+INTERVIEW CONVERSATION:
 ${conversation}
 
+SCORING:
+- Every score must be between 0 and 5.
+- 5 = exceptional
+- 4 = strong
+- 3 = acceptable
+- 2 = weak
+- 1 = very weak
+- 0 = no evidence
 
-report format notes :
-take 5 as max score and return candiate score out of max score for overallScore , technicalScore ,  communicationScore
-in preferedAnswers write answers of each question as senior and which will get you 5 out of 5 
+Evaluate:
+- overallScore
+- technicalScore
+- communicationScore
 
+CONTENT RULES:
+- strengths must contain concise observations.
+- improvements must contain actionable improvements.
+- missedConcepts must contain concepts the candidate failed to demonstrate.
+- topicsToLearn must contain concepts the candidate should study.
+- finalFeedback must contain concise actionable feedback.
 
-OUTPUT FORMAT RULES:
+PREFERRED ANSWERS:
+- Include important questions from the interview.
+- Provide an ideal senior-level answer that could reasonably score 5/5.
+- Keep each answer between 60 and 120 words.
+- Each item must contain exactly "question" and "answer".
+- preferedAnswers must always be an array.
 
-1. Return ONLY valid JSON.
-2. Do not wrap the JSON in markdown code fences.
-3. Do not include any explanation, introduction, or text outside the JSON.
-4. Follow the exact field names and structure defined below.
-5. preferedAnswers MUST always be an array.
-6. Every item in preferedAnswers MUST be an object containing exactly:
-   - question: string
-   - answer: string
-7. Never return preferedAnswers as a single string.
-8. Never return null for preferedAnswers; return an empty array [] if there are no preferred answers.
-9. All questions and answers must be strings.
-10. Do not add extra fields that are not defined in the schema.
-11. Escape quotes and special characters correctly so the response remains valid JSON.
-12. Base the report only on the provided resume and interview conversation. Do not invent interview responses or candidate experience.
+STRICT JSON RULES:
+- Return ONLY one JSON object.
+- Do NOT use markdown.
+- Do NOT use code fences.
+- Do NOT add explanations.
+- Do NOT add fields.
+- All strings must be valid JSON strings.
+- Escape quotation marks inside strings.
+- Do not include raw line breaks inside JSON strings.
 
+OUTPUT SCHEMA:
 
-Return ONLY JSON.
 {
   "overallScore": 0,
   "technicalScore": 0,
@@ -46,13 +60,14 @@ Return ONLY JSON.
   "strengths": [],
   "improvements": [],
   "missedConcepts": [],
-  "finalFeedback": ""
-  "topicsToLearn":[],
+  "finalFeedback": "",
+  "topicsToLearn": [],
   "preferedAnswers": [
     {
-      "question": "string",
-      "answer": "string"
+      "question": "",
+      "answer": ""
     }
   ]
 }
 `;
+};
